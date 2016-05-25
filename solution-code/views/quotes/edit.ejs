@@ -1,0 +1,22 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+  <h3>Edit This Quote:</h3>
+    
+        <form method="POST" action="./<%= quote.id %>?_method=PUT">
+          <div class='form-group'>
+            <input type="text" name="text" placeholder="<%= quote.text %>" class="form-control" >
+          </div>
+          <div class='form-group'>
+            <input type="text" name="author" placeholder="<%= quote.author %>" class="form-control" >
+          </div>
+          <div class='form-group'>
+            <input type="submit" value="Save Quote" class="btn btn-default">
+          </div>
+        </form>
+        <form method="POST" action="./<%= quote.id %>?_method=DELETE">
+            <input type="submit" value="Delete" class="btn btn-warning">
+        </form>
+
+
+<% include ../partials/footer %>

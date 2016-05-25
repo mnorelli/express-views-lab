@@ -1,0 +1,23 @@
+      <% include partials/head %>
+        <% include partials/header %>
+
+        <ul id="quotes">
+
+        <% quotes.forEach(function(quote) { %>
+
+          <li>
+            <blockquote>
+              <p><%= quote.text %><%- link_to(' edit', '/quotes/' + quote.id) %></p>
+              <small><%= quote.author %></small>   
+            </blockquote>
+          </li>
+
+        <% }); %>
+
+        </ul>
+
+        <nav>
+          <%- link_to('Add a New Quote', 'newquote') %>
+        </nav>
+
+        <% include partials/footer %>
